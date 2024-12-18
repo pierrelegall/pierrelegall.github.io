@@ -25,7 +25,7 @@
 
 <style>
   nav {
-    padding-block: var(--size-7);
+    padding-block: var(--size-5);
 
     @media (min-width: 768px) {
       display: flex;
@@ -33,7 +33,7 @@
     }
 
     .links {
-      margin-block: var(--size-7);
+      margin-block: var(--size-5);
 
       @media (min-width: 768px) {
         display: flex;

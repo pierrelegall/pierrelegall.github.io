@@ -3,15 +3,17 @@
 </script>
 
 <footer>
-  <p>{config.cc} &copy {new Date().getFullYear()}</p>
+  <span>{config.cc} &copy {new Date().getFullYear()}</span>
 </footer>
 
 <style>
   footer {
-    padding-block: var(--size-7);
+    padding-block: var(--size-2);
     border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
 
-    p {
+    span {
       color: var(--text-2);
     }
   }
