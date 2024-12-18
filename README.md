@@ -1,31 +1,3 @@
-# SvelteKit Markdown Blog
+# Personal website
 
-Learn how to build a blazingly fast and extendable SvelteKit Markdown blog for poets.
-
-## Post
-
-✍️ https://joyofcode.xyz/sveltekit-markdown-blog
-
-## REPL
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/joysofcode/sveltekit-markdown-blog)
-
-## Setup
-
-### 🧑‍🤝‍🧑 Clone the project
-
-```sh
-https://github.com/joysofcode/sveltekit-markdown-blog.git
-```
-
-### 📦️ Install dependencies
-
-```sh
-pnpm i
-```
-
-### 💿️ Run the development server
-
-```sh
-pnpm run dev
-```
+Here is my personal website 🖖
