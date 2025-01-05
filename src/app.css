@@ -103,6 +103,14 @@ img {
   border-radius: var(--radius-3);
 }
 
+a {
+  color: var(--brand);
+  text-decoration-color: var(--brand);
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.05em;
+  text-underline-offset: 0.2em;
+}
+
 ul,
 ol {
   list-style: none;
