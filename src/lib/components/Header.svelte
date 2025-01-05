@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Toggle from "./toggle.svelte"
+  import Toggle from "$lib/components/Toggle.svelte"
   import * as config from "$lib/config"
 </script>
 
@@ -10,13 +10,13 @@
 
   <ul class="links">
     <li>
-      <a href="/about">About</a>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/posts">Posts</a>
     </li>
     <li>
       <a href="/contact">Contact</a>
-    </li>
-    <li>
-      <a href="/rss.xml" target="_blank">RSS</a>
     </li>
   </ul>
 

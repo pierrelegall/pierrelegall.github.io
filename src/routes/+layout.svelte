@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Footer from "./footer.svelte"
-  import Header from "./header.svelte"
+  import Footer from "$lib/components/Footer.svelte"
+  import Header from "$lib/components/Header.svelte"
   import PageTransition from "./transition.svelte"
 
   import "open-props/style"
