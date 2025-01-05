@@ -12,12 +12,12 @@ published: true
   import Counter from './counter.svelte'
 </script>
 
-## Svelte
+# Svelte
 
 Media inside the **static** folder is served from `/`.
 
 ![Svelte](favicon.png)
 
-## Counter
+# Counter
 
 <Counter />
