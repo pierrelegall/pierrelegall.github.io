@@ -153,12 +153,12 @@ li {
   }
 
   :is(h2, h3, h4, h5, h6) {
-    margin-top: var(--size-8);
-    margin-bottom: var(--size-3);
+    margin-top: var(--size-5);
+    margin-bottom: var(--size-2);
   }
 
   :is(ul, ol) {
-    list-style-type: "🔥";
+    list-style-type: "-";
     padding-left: var(--size-5);
   }
 
@@ -170,6 +170,8 @@ li {
   pre {
     max-inline-size: 100%;
     padding: var(--size-3);
+    margin-top: var(--size-3);
+    margin-bottom: var(--size-3);
     border-radius: 8px;
     tab-size: 2;
   }
