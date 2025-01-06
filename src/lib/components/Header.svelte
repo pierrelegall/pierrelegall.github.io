@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Toggle from "$lib/components/Toggle.svelte"
   import * as config from "$lib/config"
 </script>
 
@@ -19,8 +18,6 @@
       <a href="/contact">Contact</a>
     </li>
   </ul>
-
-  <Toggle />
 </nav>
 
 <style>
