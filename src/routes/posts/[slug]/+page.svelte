@@ -12,8 +12,8 @@
 
 <article>
   <hgroup>
-    <h1>{data.meta.title}</h1>
-    <p>Published at {formatDate(data.meta.date)}</p>
+    <h1 class="text-5xl">{data.meta.title}</h1>
+    <p>{formatDate(data.meta.date)}</p>
   </hgroup>
 
   <div class="tags">
@@ -22,14 +22,13 @@
     {/each}
   </div>
 
-  <div class="prose">
+  <div class="prose text-justify">
     <data.content />
   </div>
 </article>
 
 <style>
   article {
-    max-inline-size: var(--size-content-3);
     margin-inline: auto;
 
     h1 {
@@ -44,7 +43,7 @@
 
     .tags {
       display: flex;
-      gap: var(--size-3);
+      gap: var(--size-2);
       margin-top: var(--size-2);
       margin-bottom: var(--size-7);
 

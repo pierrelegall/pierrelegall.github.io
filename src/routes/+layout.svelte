@@ -10,10 +10,10 @@
   let { children, data } = $props()
 </script>
 
-<div class="layout">
+<div class="layout max-w-3xl">
   <Header />
 
-  <main>
+  <main class="w-full min-w-0 max-w-3xl mx-auto py-6">
     <PageTransition url={data.url}>
       {@render children?.()}
     </PageTransition>
@@ -25,18 +25,11 @@
 <style>
   .layout {
     height: 100%;
-    max-inline-size: 1440px;
     display: grid;
     grid-template-rows: auto 1fr auto;
     margin-inline: auto;
-    padding-inline: var(--size-7);
-
-    @media (min-width: 1440px) {
-      padding-inline: 0;
-    }
-
-    main {
-      padding-block: var(--size-9);
-    }
+    padding-inline: var(--size-3);
+    min-width: 0;
+    min-height: 0;
   }
 </style>

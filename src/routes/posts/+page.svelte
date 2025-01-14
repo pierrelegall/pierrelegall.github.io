@@ -9,52 +9,26 @@
   <title>{config.title}</title>
 </svelte:head>
 
-<section>
-  <ul class="posts">
-    <div>
-      <a href="/rss.xml" target="_blank">RSS feed</a>
-    </div>
+<section class="space-y-7">
+  <h1 class="text-4xl">
+    Posts
+  </h1>
+
+  <div>
+    <a href="/rss.xml" target="_blank">RSS feed</a>
+  </div>
+
+  <div id="posts" class="space-y-7">
     {#each data.posts as post}
-      <li class="post">
-        <a href={`posts/${post.slug}`} class="title">{post.title}</a>
-        <p class="date">{formatDate(post.date)}</p>
-        {#if post.description}
-          <p class="description">{post.description}</p>
-        {/if}
-      </li>
+      <div id="post">
+        <a href={`posts/${post.slug}`} class="">
+          <p class="text-3xl">{post.title}</p>
+          <p class="text-white opacity-50">{formatDate(post.date)}</p>
+          {#if post.description}
+            <p class="text-white">{post.description}</p>
+          {/if}
+        </a>
+      </div>
     {/each}
-  </ul>
+  </div>
 </section>
-
-<style>
-  section {
-    inline-size: var(--size-content-3);
-    margin-inline: auto;
-
-    .posts {
-      display: grid;
-      gap: var(--size-5);
-
-      .post {
-        &:not(:last-child) {
-          border-bottom: 1px dashed var(--border);
-          padding-bottom: var(--size-7);
-        }
-
-        .title {
-          font-size: var(--font-size-fluid-2);
-          color: var(--brand);
-          text-decoration-color: var(--brand);
-        }
-
-        .date {
-          color: var(--text-2);
-        }
-
-        .description {
-          margin-top: var(--size-2);
-        }
-      }
-    }
-  }
-</style>

@@ -88,7 +88,15 @@ li {
 }
 
 .prose {
+  img {
+    max-width: 100%;
+    margin: auto;
+  }
+
   p {
+    margin-top: var(--size-3);
+    margin-bottom: var(--size-3);
+
     :not(:is(h1, h2, h3, h4, h5, h6) + p) {
       margin-top: var(--size-7);
     }
@@ -134,6 +142,8 @@ li {
   }
 
   pre {
+    scrollbar-color: black gray;
+    overflow-x: auto;
     max-inline-size: 100%;
     padding: var(--size-3);
     margin-top: var(--size-3);
