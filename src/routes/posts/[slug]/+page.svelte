@@ -31,12 +31,6 @@
   article {
     margin-inline: auto;
 
-    .title {
-      color: var(--primary-color);
-      line-height: 0;
-      background-color: black;
-    }
-
     h1 + p {
       margin-top: var(--size-2);
       color: var(--text-2);

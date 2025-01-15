@@ -3,7 +3,7 @@
 </script>
 
 <footer>
-  <span><span class="copyleft" /> {config.cc}</span>
+  <span><span class="rotate-180">&copy;</span> {config.cc}</span>
 </footer>
 
 <style>
@@ -22,13 +22,9 @@
       font-size: 0.875em;
     }
 
-    .copyleft {
+    .rotate-180 {
       display: inline-block;
       transform: rotate(180deg);
-    }
-
-    .copyleft::after {
-      content: "\00a9";
     }
   }
 </style>
