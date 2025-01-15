@@ -27,6 +27,13 @@
           {#if post.description}
             <p class="text-white">{post.description}</p>
           {/if}
+          {#if post.categories && post.categories.length > 0}
+            <div class="flex gap-3">
+              {#each post.categories as category}
+                <span>&num;{category}</span>
+              {/each}
+            </div>
+          {/if}
         </a>
       </div>
     {/each}
