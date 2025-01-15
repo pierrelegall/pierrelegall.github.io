@@ -1,5 +1,7 @@
-<div class="grid place-items-center h-full py-16 space-y-16 sm:space-y-0 [&>*]:mx-auto">
-  <div>
-    <p>I like long walks on the beach.</p>
-  </div>
-</div>
+<section class="space-y-7">
+  <h1 class="highlight text-4xl">
+    <mark>About</mark>
+  </h1>
+
+  <p>I like long walks on the beach.</p>
+</section>

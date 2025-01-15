@@ -12,13 +12,13 @@
 
 <article>
   <hgroup>
-    <h1 class="text-5xl">{data.meta.title}</h1>
+    <h1 class="highlight text-4xl"><mark>{data.meta.title}</mark></h1>
     <p>{formatDate(data.meta.date)}</p>
   </hgroup>
 
   <div class="tags">
     {#each data.meta.categories as category}
-      <span class="surface-4">&num;{category}</span>
+      <span>&num;{category}</span>
     {/each}
   </div>
 
@@ -31,9 +31,10 @@
   article {
     margin-inline: auto;
 
-    h1 {
-      color: var(--brand);
-      text-decoration-color: var(--brand);
+    .title {
+      color: var(--primary-color);
+      line-height: 0;
+      background-color: black;
     }
 
     h1 + p {
@@ -42,14 +43,9 @@
     }
 
     .tags {
+      color: var(--secondary-color);
       display: flex;
-      gap: var(--size-2);
-      margin-top: var(--size-2);
-      margin-bottom: var(--size-7);
-
-      > * {
-        padding: var(--size-2) var(--size-3);
-      }
+      gap: var(--size-3);
     }
   }
 </style>

@@ -17,3 +17,12 @@ function greet(name: string) {
   console.log(`Hey ${name}! 👋`)
 }
 ```
+
+With Elixir:
+
+```elixir
+def add(a, b) do
+  Logger.debug("add called")
+  a + b
+end
+```

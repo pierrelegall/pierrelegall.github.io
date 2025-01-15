@@ -32,8 +32,8 @@
     "vite": "^5.4.10"
   },
   "dependencies": {
-    "@fontsource/atkinson-hyperlegible": "^5.1.0",
-    "@fontsource/jetbrains-mono": "^5.1.1",
+    "@fontsource/atkinson-hyperlegible": "^5.1.1",
+    "@fontsource/ibm-plex-mono": "^5.1.1",
     "@sveltejs/adapter-static": "^3.0.6",
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/forms": "^0.5.9",
@@ -41,6 +41,7 @@
     "open-props": "^1.7.7",
     "rehype-slug": "^6.0.0",
     "remark-toc": "^9.0.0",
-    "shiki": "^1.22.2"
+    "shiki": "^1.22.2",
+    "tm-themes": "^1.9.8"
   }
 }

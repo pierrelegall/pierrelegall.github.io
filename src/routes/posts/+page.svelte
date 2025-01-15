@@ -10,8 +10,8 @@
 </svelte:head>
 
 <section class="space-y-7">
-  <h1 class="text-4xl">
-    Posts
+  <h1 class="page-title text-4xl highlight">
+    <mark>Posts</mark>
   </h1>
 
   <div>
@@ -22,7 +22,7 @@
     {#each data.posts as post}
       <div id="post">
         <a href={`posts/${post.slug}`} class="">
-          <p class="text-3xl">{post.title}</p>
+          <p class="text-2xl">{post.title}</p>
           <p class="text-white opacity-50">{formatDate(post.date)}</p>
           {#if post.description}
             <p class="text-white">{post.description}</p>
