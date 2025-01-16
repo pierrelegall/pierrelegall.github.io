@@ -3,8 +3,8 @@ title: First post
 description: First post.
 date: "2023-4-14"
 categories:
-  - sveltekit
-  - svelte
+  - computing
+  - elixir
 published: true
 ---
 
@@ -12,7 +12,8 @@ published: true
 
 Hey friends! 👋
 
-```ts
+```typescript
+// in app.ts
 function greet(name: string) {
   console.log(`Hey ${name}! 👋`)
 }
@@ -21,8 +22,18 @@ function greet(name: string) {
 With Elixir:
 
 ```elixir
+# in my_module.ex
 def add(a, b) do
   Logger.debug("add called")
   a + b
 end
+```
+
+And some CSS:
+
+```css
+/* in app.css */
+.title {
+  font-size: 2em;
+}
 ```

@@ -11,8 +11,8 @@
   --surface-2: var(--gray-11);
   --surface-3: var(--gray-10);
   --surface-4: var(--gray-9);
-  --background: #040404;
-  --background-variant: #050505;
+  --background-variant: #040103;
+  --background: #010303;
   --border: var(--gray-9);
 }
 
@@ -120,7 +120,7 @@ li {
   }
 
   :is(ul, ol) li {
-    margin-block: var(--size-2);
+    margin-block: var(--size-1);
     padding-inline-start: var(--size-2);
   }
 
@@ -132,7 +132,7 @@ li {
     padding: var(--size-3);
     margin-top: var(--size-3);
     margin-bottom: var(--size-3);
-    background-color: rgb(0, 0, 0, 0.4) !important;
+    background-color: rgb(0, 0, 0, 0.2) !important;
     tab-size: 2;
   }
 }
