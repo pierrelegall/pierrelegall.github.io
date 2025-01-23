@@ -13,7 +13,6 @@
       <a href="/posts">posts</a>
     </span>
     <span>
-      <a href="/contact">contact</a>
     </span>
   </div>
 </nav>
