@@ -22,7 +22,7 @@
     {/each}
   </div>
 
-  <div class="prose text-justify">
+  <div class="prose">
     <data.content />
   </div>
 </article>

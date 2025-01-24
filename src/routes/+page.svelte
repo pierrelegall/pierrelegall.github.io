@@ -7,7 +7,7 @@
     <mark>About</mark>
   </h1>
 
-  <div class="prose text-justify">
+  <div class="prose">
     <data.content />
   </div>
 </section>
