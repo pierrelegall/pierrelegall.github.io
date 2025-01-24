@@ -73,7 +73,13 @@ li {
 .prose {
   img {
     max-width: 100%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  code {
+    color: var(--primary-color);
+    background-color: rgb(0, 0, 0, 0.2);
   }
 
   p {
@@ -81,7 +87,8 @@ li {
     margin-bottom: var(--size-3);
 
     :not(:is(h1, h2, h3, h4, h5, h6) + p) {
-      margin-top: var(--size-7);
+      margin-top: var(--size-5);
+      margin-bottom: var(--size-5);
     }
 
     &:has(img) {
@@ -135,6 +142,12 @@ li {
     background-color: rgb(0, 0, 0, 0.2) !important;
     tab-size: 2;
   }
+
+  hr {
+    border: none;
+    border-top: 2px dashed rgb(255, 255, 255, 0.1);
+  }
+}
 }
 
 .highlight {
