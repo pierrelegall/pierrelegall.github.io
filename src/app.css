@@ -5,14 +5,15 @@
 :root {
   --primary-color: #EB64B9;
   --secondary-color: #40B4C4;
+  --tertiary-color: #b4dce7;
+  --background-color: #27212e;
+  --code-background-color: #3e3549;
   --text-1: var(--gray-3);
   --text-2: var(--gray-5);
   --surface-1: var(--gray-12);
   --surface-2: var(--gray-11);
   --surface-3: var(--gray-10);
   --surface-4: var(--gray-9);
-  --background: #030909;
-  --background-variant: #0c050a;
   --border: var(--gray-9);
 }
 
@@ -24,8 +25,7 @@ body {
 html {
   color: var(--text-1);
   accent-color: var(--link);
-  background-size: 20px 20px;
-  background-image: repeating-linear-gradient(0deg, var(--background), var(--background) 2px, var(--background-variant) 2px, var(--background-variant));
+  background-color: var(--background-color); 
 }
 
 img {
@@ -75,11 +75,13 @@ li {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    border: 3px solid #3e3549;
+    border-radius: 0;
   }
 
-  code {
-    color: var(--primary-color);
-    background-color: rgb(0, 0, 0, 0.2);
+  :not(pre) > code {
+    color: var(--tertiary-color);
+    background-color: var(--code-background-color);
   }
 
   p {
@@ -97,26 +99,27 @@ li {
   }
 
   h1 {
-    font-size: var(--size-7);
-  }
-
-  h2 {
     font-size: var(--size-6);
   }
 
-  h3 {
+  h2 {
     font-size: var(--size-5);
   }
 
-  h4 {
+  h3 {
     font-size: var(--size-4);
   }
 
-  h5 {
+  h4 {
     font-size: var(--size-3);
   }
 
+  h5 {
+    font-size: var(--size-2);
+  }
+
   :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--tertiary-color);
     margin-top: var(--size-5);
     margin-bottom: var(--size-2);
   }
@@ -129,6 +132,11 @@ li {
   :is(ul, ol) li {
     margin-block: var(--size-1);
     padding-inline-start: var(--size-2);
+  }
+
+  blockquote {
+    border-left: 1px dashed grey;
+    padding-left: 10px;
   }
 
   pre {
@@ -152,6 +160,7 @@ li {
 
 .highlight {
   mark {
+    font-weight: bold;
     background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
   }
 }
@@ -161,5 +170,9 @@ li {
 }
 
 .text-secondary {
-  color: var(--primary-secondary);
+  color: var(--secondary-color);
+}
+
+.text-tertiary {
+  color: var(--tertiary-color);
 }

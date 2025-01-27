@@ -11,14 +11,12 @@
     font-size: 0.8em;
     padding-block: 0.7em;
     border-top: 1px solid;
-    border-image: linear-gradient(to right, var(--primary-color) 0%, var(--secondary-color) 100%) 1;
+    border-color: var(--code-background-color);
     display: flex;
     justify-content: center;
 
     span {
-      background: linear-gradient(to right, var(--primary-color) 0%, var(--secondary-color) 100%);
-      background-clip: text;
-      color: transparent;
+      color: var(--tertiary-color);
       font-size: 0.875em;
     }
 
