@@ -21,18 +21,18 @@
   <div id="posts" class="space-y-7">
     {#each data.posts as post}
       <div id="post">
-        <a href={`posts/${post.slug}`} class="">
+        <a href={`posts/${post.slug}`}>
           <p class="text-2xl">{post.title}</p>
           <p class="text-white opacity-50">{formatDate(post.date)}</p>
-          {#if post.description}
-            <p class="text-white">{post.description}</p>
-          {/if}
           {#if post.categories && post.categories.length > 0}
             <div class="flex gap-3">
               {#each post.categories as category}
                 <span>&num;{category}</span>
               {/each}
             </div>
+          {/if}
+          {#if post.description}
+            <p class="text-white">{post.description}</p>
           {/if}
         </a>
       </div>
