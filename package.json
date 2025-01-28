@@ -34,7 +34,6 @@
   "dependencies": {
     "@fontsource/ibm-plex-mono": "^5.1.1",
     "@sveltejs/adapter-static": "^3.0.8",
-    "@tailwindcss/container-queries": "^0.1.1",
     "lucide-svelte": "^0.471.0",
     "open-props": "^1.7.10",
     "rehype-slug": "^6.0.0",
