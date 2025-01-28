@@ -13,6 +13,7 @@
       <a href="/posts">posts</a>
     </span>
     <span>
+      <a href="/resume">resume</a>
     </span>
   </div>
 </nav>

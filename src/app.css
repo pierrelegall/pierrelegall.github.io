@@ -156,6 +156,15 @@ li {
     border-top: 2px dashed rgb(255, 255, 255, 0.1);
   }
 }
+
+.resume {
+  :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--tertiary-color);
+  }
+
+  strong {
+    color: var(--secondary-color);
+  }
 }
 
 .highlight {
