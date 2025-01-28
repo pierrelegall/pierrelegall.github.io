@@ -24,10 +24,10 @@
         <a href={`posts/${post.slug}`}>
           <p class="text-2xl">{post.title}</p>
           <p class="text-white opacity-50">{formatDate(post.date)}</p>
-          {#if post.categories && post.categories.length > 0}
+          {#if post.tags && post.tags.length > 0}
             <div class="flex gap-3">
-              {#each post.categories as category}
-                <span>&num;{category}</span>
+              {#each post.tags as tag}
+                <span>&num;{tag}</span>
               {/each}
             </div>
           {/if}

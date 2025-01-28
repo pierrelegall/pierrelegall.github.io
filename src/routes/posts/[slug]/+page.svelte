@@ -16,11 +16,13 @@
     <p>{formatDate(data.meta.date)}</p>
   </hgroup>
 
-  <div class="tags">
-    {#each data.meta.categories as category}
-      <span>&num;{category}</span>
-    {/each}
-  </div>
+  {#if data.meta.tags && data.meta.tags.length > 0}
+    <div class="tags">
+      {#each data.meta.tags as tag}
+        <span>&num;{tag}</span>
+      {/each}
+    </div>
+  {/if}
 
   <div class="prose">
     <data.content />
