@@ -22,16 +22,18 @@
 
 # Education & certifications
 
-- *Mar. 2024*: [**Certification Professional Scrum Master 1**](https://www.scrum.org/assessments/professional-scrum-master-i-certification) - Ib Cegos (Nantes, France)
-- *Dec. 2023 - Mar. 2024*: [**Project manager training**](https://www.ib-formation.fr/formations/chef-de-projet) - Ib Cegos (Nantes, France)
-- *Sep. 2015 - Jun. 2016*: [**French Master degree in computing science - Système d'Information Centré sur l'Humain](https://www.univ-brest.fr/departement-informatique/)** - UBO (Brest, France)
-- *Sep. 2012 - Jun. 2014*: [**French Master degree in computing science - Technologies de l'Information et Ingénerie du Logiciel**](https://www.univ-brest.fr/departement-informatique/) - UBO (Brest, France)
-- *Sep. 2010 - Jun. 2012*: [**French License degree in computing science - Conception et Développement d'Applications**](https://www.univ-brest.fr/departement-informatique/) - UBO (Brest, France)
-- *Sep. 2008 - Jun. 2010*: [**French BTS degree in computing science - Informatique de Gestion**](https://www.saint-louis29.net/nos-formations/) - Lycée Saint-Louis (Châteaulin, France)
+- [**Certification Professional Scrum Master 1**](https://www.scrum.org/assessments/professional-scrum-master-i-certification) - Ib Cegos, Nantes, France (*Mar. 2024*)
+- [**Project manager training**](https://www.ib-formation.fr/formations/chef-de-projet) - Ib Cegos, Nantes, France (*Dec. 2023 - Mar. 2024*)
+- [**French Master degree in computing science - Système d'Information Centré sur l'Humain**](https://www.univ-brest.fr/departement-informatique/) - UBO, Brest, France (*Sep. 2015 - Jun. 2016*)
+- [**French Master degree in computing science - Technologies de l'Information et Ingénerie du Logiciel**](https://www.univ-brest.fr/departement-informatique/) - UBO, Brest, France (*Sep. 2012 - Jun. 2014*)
+- [**French License degree in computing science - Conception et Développement d'Applications**](https://www.univ-brest.fr/departement-informatique/) - UBO, Brest, France (*Sep. 2010 - Jun. 2012*)
+- [**French BTS degree in computing science - Informatique de Gestion**](https://www.saint-louis29.net/nos-formations/) - Lycée Saint-Louis, Châteaulin, France (*Sep. 2008 - Jun. 2010*)
 
 # Experiences
 
 - **Gens de Confiance - Web developer** (*Jan. 2023 - Mar. 2023*)
+
+  Worked on the location section of the Gens de Confiance classified ads plateform.
 
   - needs' refinement
   - tasks planning
@@ -48,11 +50,11 @@
   - music events organisation
   - harm reduction at events
   - travelling
-  - software engineer watch (mainly Elixir and Web things)
+  - software engineer watch (mainly Elixir and Web stuff)
 
 - **IBP - Web developer, as Zenika consultant** (*Jan. 2019 - Feb. 2020*)
 
-  Developed an internal project quality monitoring tool as a test project to demonstrate the company's potential for leveraging Cloud technologies, with AWS selected for this experimentation.
+  Worked on an internal project quality monitoring tool as a test project to demonstrate the IBP's potential for leveraging Cloud technologies, with AWS selected for this experimentation.
 
   - needs' refinement
   - tasks planning
@@ -78,17 +80,17 @@
 
 - **Manitou - Web developer, as Zenika consultant** (*Aug. 2018 - Dec. 2018*)
 
-  Developed a web app for internal communication (news, events, chat) within the Manitou group.
+  Worked on a web app for internal communication (news, events, chat) within the Manitou group.
 
-  - corrective maintenance 
-  - implementation of new features 
+  - corrective maintenance
+  - implementation of new features
   - deployment
 
   *Tooling*: JavaScript, Node.js, Angular, Ionic, Firebase, Git
 
 - **Groupama - Web developer, as Zenika consultant** (*Feb. 2018 - Jun. 2018*)
 
-  Developed the web space for individual insurance customers.
+  Worked on the web space for individual insurance customers.
 
   - task planning
   - implementation (back-end & front-end)
@@ -101,7 +103,7 @@
 
 - **Energiency - Web developer, as SII consultant** (*Jan. 2017 - Dec. 2017*)
 
-  Development of the Energiency product, a monitoring platform of energy consumption for the industry.
+  Worked on the Energiency product, a monitoring platform of energy consumption for the industry.
 
   - tasks planning
   - implementation (middleware & front-end)
@@ -123,16 +125,17 @@
 
 - **Télécom Santé - Web developer** (*Oct. 2014 - Jul. 2015*)
 
-  Developed and maintained the MediaScreen product, a hybrid TV-tablet media center for patients in hospital rooms.
+  Worked on the MediaScreen product, a hybrid TV-tablet media center for patients in hospital rooms.
 
-  - corrective maintenance and developpement of applications for the MediaScreen
+  - corrective maintenance
+  - developpement of applications for the MediaScreen
   - test scenari writing and execution
 
   *Tooling*: JavaScript/Node.js, MongoDB, Git, TestLink
 
 - **Thalès Système Aéroportés, as student Web developer** (*Jan. 2013 - Aug. 2014*)
 
-  Developed the information system for tracking repair workflows.
+  Worked on information system for tracking repair workflows of TSA.
 
   - corrective maintenance of the legacy app
   - definition of needs with the business team
@@ -156,4 +159,3 @@
 
   - kung fu (Tang Lang Quan)
   - walking
-
