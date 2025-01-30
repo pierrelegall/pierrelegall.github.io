@@ -11,13 +11,7 @@
 </script>
 
 {#key url}
-  <div class="transition" in:fade>
+  <div in:fade={{ duration: 650 }}>
     {@render children?.()}
   </div>
 {/key}
-
-<style>
-  .transition {
-    height: 100%;
-  }
-</style>
