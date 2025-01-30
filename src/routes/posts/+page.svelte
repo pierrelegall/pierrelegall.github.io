@@ -12,7 +12,7 @@
 </svelte:head>
 
 <section class="space-y-7">
-  <h1 class="page-title text-4xl highlight">
+  <h1 class="page-title highlight text-4xl">
     <mark>Posts</mark>
   </h1>
 

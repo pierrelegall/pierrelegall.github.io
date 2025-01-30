@@ -5,7 +5,7 @@ tags: []
 published: true
 ---
 
-**TL;DR**: *`git push --force-with-lease` allow you to force a push with a lot more safety than a classic `--force`, checking the synchronization with the remote before taking action*
+**TL;DR**: _`git push --force-with-lease` allow you to force a push with a lot more safety than a classic `--force`, checking the synchronization with the remote before taking action_
 
 ![But when I do, I use --force-with-lease](/assets/posts/git-push-force-with-lease-meme-1.avif)
 

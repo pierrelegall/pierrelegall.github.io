@@ -5,7 +5,7 @@ tags: []
 published: true
 ---
 
-**TL;DR**: *the agent model applied in Erlang/Elixir scale by nature without the need of a microservices architecture*
+**TL;DR**: _the agent model applied in Erlang/Elixir scale by nature without the need of a microservices architecture_
 
 ![Microservices vs. Elixir VM](/assets/posts/microservices-vs-elixir-vm-meme.avif)
 
@@ -14,6 +14,7 @@ While many companies are still thinking about a migration to a microservice arch
 # The purpose of a microservices architecture
 
 To be as brief as possible, microservices architecture help in these cases:
+
 - scalability issues: monolithic apps can be hard to scale
 - splitting a service into functional parts: teams could have a much adapted code source organization for their project
 - language agnostic solution: you can choose the more suitable tool to solve a specific problem

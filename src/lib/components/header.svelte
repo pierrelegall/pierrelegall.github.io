@@ -2,7 +2,7 @@
   import config from "$lib/config"
 </script>
 
-<nav class="py-6 flex flex-col align-center justify-between space-y-1 sm:flex-row sm:space-y-0">
+<nav class="align-center flex flex-col justify-between space-y-1 py-6 sm:flex-row sm:space-y-0">
   <a class="title text-primary my-auto text-white" href="/">
     {config.title}
   </a>

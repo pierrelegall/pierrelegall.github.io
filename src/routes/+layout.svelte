@@ -17,7 +17,7 @@
 <div class="layout max-w-3xl">
   <Header />
 
-  <main class="w-full min-w-0 max-w-3xl mx-auto py-4">
+  <main class="mx-auto w-full min-w-0 max-w-3xl py-4">
     <PageTransition url={data.url}>
       {@render children?.()}
     </PageTransition>
