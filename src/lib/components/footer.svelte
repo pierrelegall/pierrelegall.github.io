@@ -3,7 +3,7 @@
 </script>
 
 <footer>
-  <span>CC BY 4.0 <span class="rotate-180">&copy;</span> {config.cc}</span>
+  <span>CC BY 4.0 <span class="rotate-180">&copy;</span> {config.author}</span>
 </footer>
 
 <style>

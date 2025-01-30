@@ -1,9 +1,11 @@
 <script lang="ts">
-  import { title } from "$lib/config"
+  import config from "$lib/config"
 </script>
 
 <nav class="py-6 flex flex-col align-center justify-between space-y-1 sm:flex-row sm:space-y-0">
-  <a class="title text-primary my-auto text-white" href="/">{title}</a>
+  <a class="title text-primary my-auto text-white" href="/">
+    {config.title}
+  </a>
 
   <div class="flex flex-row space-x-4 [&>*]:my-auto">
     <span>

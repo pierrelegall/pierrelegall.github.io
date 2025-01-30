@@ -1,12 +1,14 @@
 <script lang="ts">
   import { formatDate } from "$lib/utils"
-  import * as config from "$lib/config"
+  import config from "$lib/config"
 
   let { data } = $props()
 </script>
 
 <svelte:head>
-  <title>{config.title}</title>
+  <title>Posts ~ {config.title}</title>
+  <meta name="author" content={config.author} />
+  <meta name="description" content="Posts from Pierre Le Gall" />
 </svelte:head>
 
 <section class="space-y-7">
