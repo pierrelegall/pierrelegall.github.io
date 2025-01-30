@@ -1,11 +1,16 @@
 ---
 title: "Elixir can make you avoid the microservices architecture"
 date: "2022-12-14"
-tags: []
+description: |
+  The agent model implemented in Elixir via the BEAM scales by nature without the need for a microservices architecture.
+section: "computing"
+tags: ["elixir", "microservices"]
+keywords: ["beam", "erlang", "monolith"]
+locale: "en_US"
 published: true
 ---
 
-**TL;DR**: _the agent model applied in Erlang/Elixir scale by nature without the need of a microservices architecture_
+**TL;DR**: _The agent model implemented in Elixir via the BEAM scales by nature without the need for a microservices architecture._
 
 ![Microservices vs. Elixir VM](/assets/posts/microservices-vs-elixir-vm-meme.avif)
 

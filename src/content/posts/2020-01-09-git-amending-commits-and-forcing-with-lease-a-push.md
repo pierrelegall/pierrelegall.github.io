@@ -1,11 +1,16 @@
 ---
 title: "Git: amending commits and forcing with lease a push"
 date: "2020-01-09"
-tags: []
+description: |
+  The "git push --force-with-lease" command allows you to force a push with a lot more safety than a classic "--force", checking the synchronization with the remote before taking action.
+section: "computing"
+tags: ["git"]
+keywords: ["push", "force", "lease", "force-with-lease"]
 published: true
+locale: "en_US"
 ---
 
-**TL;DR**: _`git push --force-with-lease` allow you to force a push with a lot more safety than a classic `--force`, checking the synchronization with the remote before taking action_
+**TL;DR**: _The `git push --force-with-lease` command allows you to force a push with a lot more safety than a classic `--force`, checking the synchronization with the remote before taking action._
 
 ![But when I do, I use --force-with-lease](/assets/posts/git-push-force-with-lease-meme-1.avif)
 

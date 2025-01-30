@@ -1,13 +1,13 @@
 <script lang="ts">
+  import PostSEOTags from "$lib/components/post-seo-tags.svelte"
+
   import { formatDate } from "$lib/utils"
 
   let { data } = $props()
 </script>
 
 <svelte:head>
-  <title>{data.meta.title}</title>
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content={data.meta.title} />
+  <PostSEOTags {data} />
 </svelte:head>
 
 <article>
