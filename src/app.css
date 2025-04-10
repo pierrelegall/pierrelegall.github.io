@@ -1,6 +1,5 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "tailwindcss";
+@config "../tailwind.config.ts";
 
 :root {
   --primary-color: #eb64b9;
@@ -26,10 +25,6 @@ html {
   color: var(--text-1);
   accent-color: var(--link);
   background-color: var(--background-color);
-}
-
-img {
-  border-radius: var(--radius-3);
 }
 
 a {
