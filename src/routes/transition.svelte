@@ -11,7 +11,7 @@
 </script>
 
 {#key url}
-  <div in:fade={{ duration: 650 }}>
+  <div class="h-full" in:fade={{ duration: 650 }}>
     {@render children?.()}
   </div>
 {/key}

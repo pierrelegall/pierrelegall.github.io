@@ -2,7 +2,7 @@ import { error } from "@sveltejs/kit"
 
 export async function load() {
   try {
-    const about = await import("/src/content/about.md")
+    const about = await import("/src/content/about.svelte")
 
     return {
       content: about.default,

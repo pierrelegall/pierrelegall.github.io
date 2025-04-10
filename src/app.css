@@ -76,7 +76,6 @@ li {
     margin-left: auto;
     margin-right: auto;
     border: 3px solid #3e3549;
-    border-radius: 0;
   }
 
   :not(pre) > code {
