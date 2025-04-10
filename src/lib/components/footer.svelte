@@ -8,6 +8,7 @@
 
 <style>
   footer {
+    margin-top: 1em;
     font-size: 0.8em;
     padding-block: 0.7em;
     border-top: 1px solid;

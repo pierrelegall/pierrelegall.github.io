@@ -2,7 +2,7 @@
   import SocialLinks from "$lib/components/social-links.svelte"
 </script>
 
-<div class="space-y-8 flex flex-col justify-center min-h-full pb-32">
+<div class="space-y-8 flex flex-col justify-center min-h-full">
   <img class="w-44 h-44 rounded-full mx-auto" src="/assets/main/avatar.avif" alt="Me" />
 
   <div class="text-center">
