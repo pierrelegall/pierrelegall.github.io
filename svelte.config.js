@@ -6,11 +6,22 @@ import { createHighlighter } from "shiki"
 import remarkToc from "remark-toc"
 import rehypeSlug from "rehype-slug"
 
+import { join, dirname } from "path"
+import { fileURLToPath } from "url"
+
+function absolutePath(path) {
+  const fileName = fileURLToPath(import.meta.url)
+  const dirName = dirname(fileName)
+  const absolutePath = join(dirName, path)
+
+  return absolutePath
+}
+
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
   extensions: [".md"],
   layout: {
-    _: "./src/mdsvex.svelte"
+    _: absolutePath("./src/mdsvex.svelte")
   },
   highlight: {
     highlighter: async (code, lang = "text") => {
