@@ -17,9 +17,6 @@
     <span>
       <a href="/projects">projects</a>
     </span>
-    <span>
-      <a href="/resume">resume</a>
-    </span>
   </div>
 </nav>
 
