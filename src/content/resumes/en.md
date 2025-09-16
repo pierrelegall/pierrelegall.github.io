@@ -12,17 +12,20 @@
 # Toolbox
 
 - _Collaboration_: [Scrum](https://scrum.org) (certified PSM1)
-- _Programming languages_: [Elixir](https://elixir-lang.org/), [JavaScript](https://en.wikipedia.org/wiki/JavaScript)/[TypeScript](https://www.typescriptlang.org/)
+- _Programming languages_: [Elixir](https://elixir-lang.org/), [JavaScript](https://en.wikipedia.org/wiki/JavaScript)/[TypeScript](https://www.typescriptlang.org/), [Python](https://www.python.org/), [Ruby](https://www.ruby-lang.org), [Shell](https://en.wikipedia.org/wiki/Shell_script)
 - _Data management_: [PostgreSQL](https://www.postgresql.org/), [json:api](https://jsonapi.org/)
 - _Web back-end_: [Phoenix Framework](https://www.phoenixframework.org/), [Ash Framework](https://ash-hq.org/)
 - _Web front-end_: [Phoenix LiveView](https://hexdocs.pm/phoenix_live_view/welcome.html), [Svelte](https://en.wikipedia.org/wiki/Svelte), [TailwindCSS](https://tailwindcss.com/), [DaisyUI](https://daisyui.com/)
-- _Business Intelligence_: [Livebook](https://livebook.dev/)
-- _Source control_: [Git](https://git-scm.com/), [GitHub](https://github.com/)
+- _Source control_: [Git](https://git-scm.com/),
+- _Project management_: [GitHub](https://github.com/), [Gitlab](https://gitlab.com/), [Jira](https://www.atlassian.com/software/jira)
+- _Security information and event management_: [Splunk](https://www.splunk.com/)
 - _Environment_: [GNU/Linux](https://www.gnu.org/gnu/linux-and-gnu.en.html), [Docker](https://www.docker.com/), [Fly.io](https://fly.io/)
 
-# Education & certifications
+# Learning
 
-- [**Certification Professional Scrum Master 1**](https://www.scrum.org/assessments/professional-scrum-master-i-certification) - Ib Cegos, Nantes, France (_Mar. 2024_)
+- [**ISO 27001 certification**](https://www.iso.org/standard/27001) - via Docaposte Institute, Nantes, France (_Sep. 2025_)
+- [**Cybersecurity training**](https://www.docaposteinstitute.com) - Docaposte Institute, Nantes, France (_Jun. - Sep. 2025_)
+- [**Professional Scrum Master 1 certification**](https://www.scrum.org/assessments/professional-scrum-master-i-certification) - via Ib Cegos, Nantes, France (_Mar. 2024_)
 - [**Project manager training**](https://www.ib-formation.fr/formations/chef-de-projet) - Ib Cegos, Nantes, France (_Dec. 2023 - Mar. 2024_)
 - [**French Master degree in computing science - Système d'Information Centré sur l'Humain**](https://www.univ-brest.fr/departement-informatique/) - UBO, Brest, France (_Sep. 2015 - Jun. 2016_)
 - [**French Master degree in computing science - Technologies de l'Information et Ingénerie du Logiciel**](https://www.univ-brest.fr/departement-informatique/) - UBO, Brest, France (_Sep. 2012 - Jun. 2014_)
@@ -31,7 +34,7 @@
 
 # Experiences
 
-- **Gens de Confiance - Web developer** (_Jan. 2023 - Mar. 2023_)
+- **Gens de Confiance - Web developer** (_Jan. - Mar. 2023_)
 
   Worked on the location section of the Gens de Confiance classified ads plateform.
 
@@ -63,8 +66,7 @@
   - deployment
   - review of the product to final users
   - review of the solution to decision-makers
-  - team retrospective
-  - Git training for the client's developers
+  - Git training to the client's tech team
 
   _Tooling_: Scrum, JavaScript/TypeScript, Node.js, Angular, PostgreSQL, Git, AWS
 
@@ -74,7 +76,7 @@
 
   - update course material
   - create specific exercices suited to the class needs
-  - teaching
+  - sharing knowledge
 
   _Tooling_: JavaScript, RxJS
 
@@ -83,7 +85,7 @@
   Worked on a web app for internal communication (news, events, chat) within the Manitou group.
 
   - corrective maintenance
-  - implementation of new features
+  - new features implementations
   - deployment
 
   _Tooling_: JavaScript, Node.js, Angular, Ionic, Firebase, Git
@@ -118,7 +120,7 @@
 
   Research about interoperability between different internal Domain Specific Languages.
 
-  - bibliography writing about state of the art on DSLs
+  - bibliography writing about the state of the art of DSLs
   - design and implementation of a POC for internal DSLs transformations
 
   _Tooling_: Java/Xtend, Python, Git, Org-mode
@@ -129,13 +131,13 @@
 
   - corrective maintenance
   - developpement of applications for the MediaScreen
-  - test scenari writing and execution
+  - test scenari writing and building tests reports
 
   _Tooling_: JavaScript/Node.js, MongoDB, Git, TestLink
 
 - **Thalès Système Aéroportés, as student Web developer** (_Jan. 2013 - Aug. 2014_)
 
-  Worked on information system for tracking repair workflows of TSA.
+  Worked on the tracking system of the repair workflow of TSA.
 
   - corrective maintenance of the legacy app
   - definition of needs with the business team
@@ -145,15 +147,15 @@
 
 # Hobbies
 
-- **Music**
-
-  - DJing
-  - guitar & bass guitar
-
 - **Associative**
 
   - DJ/organizer at Tempus Fugit Project, association organizing electronic music events
   - volonteer for multiple harm reduction associations actions in party environments
+
+- **Music**
+
+  - DJing
+  - guitar & bass guitar
 
 - **Sport**
 
