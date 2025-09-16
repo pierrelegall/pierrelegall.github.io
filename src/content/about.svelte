@@ -6,12 +6,15 @@
   <img class="w-44 h-44 rounded-full mx-auto" src="/assets/main/avatar.avif" alt="Me" />
 
   <div class="text-center">
-    <div>Hello there! 🖖</div>
+    <div>Hello there!</div>
     <br />
-    <div>I'm Pierre Le Gall, software engineer & DJ from Nantes, France.</div>
+    <div>I'm Pierre Le Gall, welcome to my homepage.</div>
   </div>
 
   <div style="w-full">
-    <SocialLinks />
+    <SocialLinks
+      github="https://github.com/pierrelegall"
+      soundcloud="https://soundcloud.com/dwellearth"
+    />
   </div>
 </div>
