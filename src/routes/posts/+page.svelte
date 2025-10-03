@@ -12,12 +12,11 @@
 </svelte:head>
 
 <section class="space-y-7">
-  <h1 class="page-title highlight text-4xl">
-    <mark>Posts</mark>
-  </h1>
-
-  <div>
-    <a href="/posts/rss.xml" target="_blank">RSS feed</a>
+  <div class="flex items-center justify-between">
+    <h1 class="page-title highlight text-4xl">
+      <mark>Posts</mark>
+    </h1>
+    <a href="/posts/feed.xml" target="_blank">Feed</a>
   </div>
 
   <div id="posts" class="space-y-7">
