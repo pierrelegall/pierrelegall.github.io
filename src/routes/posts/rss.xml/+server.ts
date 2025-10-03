@@ -4,7 +4,7 @@ import type { Post } from "$lib/types"
 export const prerender = true
 
 export async function GET({ fetch }) {
-  const response = await fetch("api/posts")
+  const response = await fetch("../api/posts")
   const posts: Post[] = await response.json()
   const headers = { "Content-Type": "application/xml" }
 
@@ -13,8 +13,8 @@ export async function GET({ fetch }) {
       <channel>
         <title>${config.title}</title>
         <description>${config.description}</description>
-        <link>${config.url}</link>
-        <atom:link href="${config.url}/rss.xml" rel="self" type="application/rss+xml"/>
+        <link>${config.url}/posts</link>
+        <atom:link href="${config.url}/posts/rss.xml" rel="self" type="application/rss+xml"/>
         ${posts.map((post) => postTemplate(post)).join("")}
       </channel>
     </rss>
@@ -28,8 +28,8 @@ function postTemplate(post: Post) {
     <item>
       <title>${post.title}</title>
       <description>${post.description}</description>
-      <link>${config.url}/${post.slug}</link>
-      <guid isPermaLink="true">${config.url}/${post.slug}</guid>
+      <link>${config.url}/posts/${post.slug}</link>
+      <guid isPermaLink="true">${config.url}/posts/${post.slug}</guid>
       <pubDate>${new Date(post.date).toUTCString()}</pubDate>
     </item>
   `

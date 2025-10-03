@@ -17,7 +17,7 @@
   </h1>
 
   <div>
-    <a href="/rss.xml" target="_blank">RSS feed</a>
+    <a href="/posts/rss.xml" target="_blank">RSS feed</a>
   </div>
 
   <div id="posts" class="space-y-7">
