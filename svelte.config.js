@@ -17,6 +17,32 @@ function absolutePath(path) {
   return absolutePath
 }
 
+// Create a singleton highlighter instance that's reused across all code blocks
+let highlighterInstance = null
+
+async function getHighlighter() {
+  if (!highlighterInstance) {
+    highlighterInstance = await createHighlighter({
+      themes: ["laserwave"],
+      langs: [
+        "css",
+        "elixir",
+        "erlang",
+        "gleam",
+        "html",
+        "javascript",
+        "json",
+        "typescript",
+        "rust",
+        "shell",
+        "toml",
+        "yaml"
+      ]
+    })
+  }
+  return highlighterInstance
+}
+
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
   extensions: [".md"],
@@ -25,24 +51,7 @@ const mdsvexOptions = {
   },
   highlight: {
     highlighter: async (code, lang = "text") => {
-      const highlighter = await createHighlighter({
-        themes: ["laserwave"],
-        langs: [
-          "css",
-          "elixir",
-          "erlang",
-          "gleam",
-          "html",
-          "javascript",
-          "json",
-          "typescript",
-          "rust",
-          "shell",
-          "toml",
-          "yaml"
-        ]
-      })
-      await highlighter.loadLanguage("javascript", "typescript")
+      const highlighter = await getHighlighter()
       const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme: "laserwave" }))
       return `{@html \`${html}\` }`
     }
