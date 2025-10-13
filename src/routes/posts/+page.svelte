@@ -13,8 +13,8 @@
 
 <section class="space-y-7">
   <div class="flex items-center justify-between">
-    <h1 class="page-title highlight text-4xl">
-      <mark>Posts</mark>
+    <h1 class="page-title text-4xl">
+      Posts
     </h1>
     <a href="/posts/feed.xml" target="_blank">-> feed</a>
   </div>

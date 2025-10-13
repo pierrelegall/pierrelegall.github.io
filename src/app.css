@@ -172,6 +172,21 @@ li {
   }
 }
 
+.page-title {
+  font-weight: bold;
+  background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  width: fit-content;
+  position: relative;
+  display: inline-block;
+  padding: 0.1em 0.2em;
+  border: 2px solid;
+  border-image: linear-gradient(to right, var(--primary-color), var(--secondary-color)) 1;
+}
+
 .text-primary {
   color: var(--primary-color);
 }

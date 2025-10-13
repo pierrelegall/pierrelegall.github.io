@@ -11,11 +11,11 @@
 </svelte:head>
 
 <section class="space-y-7">
-  <h1 class="highlight text-4xl">
-    <mark>Projects</mark>
+  <h1 class="page-title text-4xl">
+    Projects
   </h1>
 
-  <div class="prose resume">
+  <div class="prose">
     <data.content />
   </div>
 </section>
