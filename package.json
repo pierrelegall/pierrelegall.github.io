@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@fontsource/ibm-plex-mono": "^5.2.6",
+    "@giscus/svelte": "^3.1.0",
     "@sveltejs/adapter-static": "^3.0.8",
     "@sveltejs/kit": "^2.25.0",
     "@sveltejs/vite-plugin-svelte": "^6.1.0",

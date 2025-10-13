@@ -1,5 +1,6 @@
 <script lang="ts">
   import PostSEOTags from "$lib/components/post-seo-tags.svelte"
+  import Giscus from "@giscus/svelte"
 
   import { formatDate } from "$lib/utils"
 
@@ -27,6 +28,22 @@
   <div class="prose">
     <data.content />
   </div>
+
+  <div class="comments">
+    <Giscus
+      repo="pierrelegall/pierrelegall.github.io"
+      repoId="R_kgDONxDnrw"
+      category="Blog posts"
+      categoryId="DIC_kwDONxDnr84CwlZ3"
+      mapping="og:title"
+      strict="0"
+      reactionsEnabled="1"
+      emitMetadata="0"
+      inputPosition="bottom"
+      theme="catppuccin_mocha"
+      lang="en"
+    />
+  </div>
 </article>
 
 <style>
@@ -42,6 +59,10 @@
       color: var(--secondary-color);
       display: flex;
       gap: var(--size-3);
+    }
+
+    .comments {
+      margin-top: var(--size-8);
     }
   }
 </style>
