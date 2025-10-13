@@ -116,6 +116,10 @@ li {
     color: var(--tertiary-color);
     margin-top: var(--size-5);
     margin-bottom: var(--size-2);
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   :is(ul, ol) {
