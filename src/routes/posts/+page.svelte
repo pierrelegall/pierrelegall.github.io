@@ -16,7 +16,7 @@
     <h1 class="page-title highlight text-4xl">
       <mark>Posts</mark>
     </h1>
-    <a href="/posts/feed.xml" target="_blank">Feed</a>
+    <a href="/posts/feed.xml" target="_blank">-> feed</a>
   </div>
 
   <div id="posts" class="space-y-7">
