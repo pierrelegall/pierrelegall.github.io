@@ -1,0 +1,628 @@
+<script lang="ts">
+  import config from "$lib/config"
+
+  const events = [
+    {
+      date: {
+        en: "In development",
+        fr: "En développement",
+      },
+      title: {
+        fr: "Strument service",
+        en: "Strument service",
+      },
+      tags: ["elixir", "phoenix", "ash", "tauri"],
+      description: {
+        en: "Development of a musical event management service accessible via the web and a mobile application, highlighting local artists, collectives and venues while focusing on quick access to event-related information.",
+        fr: "Développement d'un service de gestion d'événements musicaux accessible via le web ainsi qu'avec une application mobile, mettant en avant les artistes, collectifs et scènes locales tout se focalisant sur un accès rapide aux informations liées aux événements.",
+      },
+    },
+    {
+      date: {
+        en: "January 2026 → maintenance",
+        fr: "Janvier 2026 → maintenance",
+      },
+      title: {
+        en: "PS3 Elixir library",
+        fr: "PS3 Elixir library",
+      },
+      tags: ["elixir", "s3"],
+      description: {
+        en: "Development of PS3, a pure Elixir library for simulating an S3 service locally within the Elixir stack. The “dev” mode simply stores files in a local folder, while the “test” mode (more complex) isolates multiple S3 services to enable asynchronous test execution.",
+        fr: "Développement de PS3, une bibliothéque pure Elixir permettant de simuler un service S3 localement pour la stack Elixir. Le mode “dev” permet de simplement stocker les fichiers dans un dossier en local, alors que le mode “test” (plus complexe), permet l'isolation de multiple services S3 dans le but de permettre l'exécution asynchrone des tests.",
+      },
+      links: {
+        "source code": "https://github.com/pierrelegall/ps3"
+      },
+    },
+    {
+      date: {
+        en: "December 2025 → maintenance",
+        fr: "Décembre 2025 → maintenance",
+      },
+      title: {
+        en: "Sheld CLI",
+        fr: "Sheld CLI",
+      },
+      tags: ["rust", "shell", "bubblewrap", "linux"],
+      description: {
+        en: "Development of a shell command isolation manager using Bubblewrap on GNU/Linux. The goal is to add a security layer over development environments, particularly in the context of AI tool usage.",
+        fr: "Développement d'un gestionnaire d'isolation de commandes shell via Bubblewrap sous GNU/Linux. L'idée étant de créer une couche de sécurité sur les environnements de développement, notamment dans le cadre de l'utilisation d'outils AI.",
+      },
+      links: {
+        "article": "/posts/2026-03-30-i-built-sheld-a-bubblewrap-profile-manager",
+        "source code": "https://github.com/pierrelegall/sheld",
+        "AUR package": "https://aur.archlinux.org/packages/sheld"
+      },
+    },
+    {
+      date: {
+        en: "July 2025 → maintenance",
+        fr: "Juillet 2025 → maintenance",
+      },
+      title: {
+        en: "Dripping Tales website",
+        fr: "Dripping Tales website",
+      },
+      tags: ["typescript", "svelte"],
+      description: {
+        en: "Development of the Dripping Tales music label website, showcasing its artists and albums while introducing visitors to the label's universe.",
+        fr: "Développement du site du label de musique Dripping Tales, présentant ses artistes et albums, tout en faisant découvrir l'univers du label.",
+      },
+      links: {
+        "Dripping Tales": "https://drippingtales.github.io",
+        "source code": "https://github.com/drippingTales/drippingtales.github.io",
+      },
+    },
+    {
+      date: {
+        en: "September 2025",
+        fr: "Septembre 2025",
+      },
+      title: {
+        en: "Certification “ISO/IEC 27001 Foundation”",
+        fr: "Certification “ISO/IEC 27001 Foundation”",
+      },
+      tags: ["isms", "cybersecurity"],
+      description: {
+        en: "Certification introducing the ISO/IEC 27001 standard and its requirements for implementing an Information Security Management System within an organization.",
+        fr: "Certification introduisant la norme ISO/IEC 27001 et ses exigences pour la mise en œuvre d'un Système de Management de la Sécurité de l'Information au sein d'une organisation.",
+      },
+      links: {
+        "ISO/IEC 27001 Foundation": "https://pecb.com/en/education-and-certification-for-individuals/iso-iec-27001/iso-iec-27001-foundation"
+      },
+    },
+    {
+      date: {
+        en: "June 2025 → September 2025",
+        fr: "Juin 2025 → Septembre 2025",
+      },
+      title: {
+        en: "Training “Cybersecurity Developer” (Docaposte Institute)",
+        fr: "Formation “Développeur en Cybersécurité” (Docaposte Institute)",
+      },
+      tags: ["cybersecurity", "networking", "logmanagement", "riskmanagement", "linux", "shell", "python", "sql", "postgresql", "spluck"],
+      description: {
+        en: "Training focused on offensive and defensive cybersecurity fundamentals: database security, networking, log management and analysis, cryptography and penetration testing, with the goal of strengthening information system protection.",
+        fr: "Formation axée sur les fondamentaux offensifs et défensifs de la cybersécurité : sécurité des bases de données, réseaux, gestion/analyse des logs, cryptographie et tests d'intrusion, avec pour objectif de renforcer la protection des systèmes d'information.",
+      },
+      links: {
+        "Docaposte Institute": "https://www.docaposteinstitute.com/nos-formations"
+      },
+    },
+    {
+      date: {
+        en: "June 2024",
+        fr: "Juin 2024",
+      },
+      title: {
+        en: "BPM Android app",
+        fr: "BPM Android app",
+      },
+      tags: ["kotlin", "android"],
+      description: {
+        en: "Development of a BPM (beats per minute) calculator application for Android.",
+        fr: "Développement d'une application de calcul de BPM (beats per minute) pour Android.",
+      },
+      links: { "source code": "https://github.com/pierrelegall/bpm" },
+    },
+    {
+      date: {
+        en: "March 2024",
+        fr: "Mars 2024",
+      },
+      title: {
+        en: "Certification “Professional Scrum Master 1”",
+        fr: "Certification “Professional Scrum Master 1”",
+      },
+      tags: ["scrum", "agility"],
+      description: {
+        en: "Certification validating mastery of the Scrum framework and the ability to guide a team in its application.",
+        fr: "Certification validant la maîtrise du cadre Scrum et la capacité à accompagner une équipe dans son application.",
+      },
+      links: {
+        "Professional Scrum Master I": "https://www.scrum.org/assessments/professional-scrum-master-i-certification"
+      },
+    },
+    {
+      date: {
+        en: "December 2023 → March 2024",
+        fr: "Décembre 2023 → Mars 2024",
+      },
+      title: {
+        en: "Training “IT Project Manager” (ib Cegos)",
+        fr: "Formation “Chef de Projets en Informatique” (ib Cegos)",
+      },
+      tags: ["projectmanagement", "riskmanagement", "agility"],
+      description: {
+        en: "Training covering IT project management: planning, steering, risk management and stakeholder management.",
+        fr: "Formation couvrant la gestion de projet informatique : planification, pilotage, gestion des risques et des parties prenantes.",
+      },
+      links: {
+        "ib Cegos": "https://www.ib-formation.fr/"
+      },
+    },
+    {
+      date: {
+        en: "January 2023 → August 2023",
+        fr: "Janvier 2023 → Août 2023",
+      },
+      title: {
+        en: "Gens de Confiance – Web Developer",
+        fr: "Gens de Confiance – Développeur Web",
+      },
+      tags: ["typescript", "react", "php", "mysql"],
+      description: {
+        en: "Maintenance and development of the vacation rental section of the Gens de Confiance platform.",
+        fr: "Maintenance et développement de la section location de vacances de la plateforme Gens de Confiance.",
+      },
+      links: {
+        "Gens de Confiance": "https://gensdeconfiance.com/fr"
+      },
+    },
+    {
+      date: {
+        en: "December 2022 → maintenance",
+        fr: "Décembre 2022 → maintenance",
+      },
+      title: {
+        en: "Whatlangex library",
+        fr: "Whatlangex library",
+      },
+      tags: ["elixir", "rust"],
+      description: {
+        en: "Binding to the Whatlang language detector written in Rust for the Elixir language.",
+        fr: "Liaison au détecteur de langue Whatlang écrit en Rust pour le langage Elixir.",
+      },
+      links: {
+        "Hex package": "https://hex.pm/packages/whatlangex",
+        "source code": "https://github.com/pierrelegall/whatlangex"
+      },
+    },
+    {
+      date: {
+        en: "January 2019 → February 2020",
+        fr: "Janvier 2019 → Février 2020",
+      },
+      title: {
+        en: "Informatique Banque Populaire – Web Developer, Zenika consultant",
+        fr: "Informatique Banque Populaire – Développeur Web, consultant Zenika",
+      },
+      tags: ["typescript", "nodejs", "angular", "postgresql", "aws"],
+      description: {
+        en: "Development of an internal quality tracking tool for in-house products. This project was intended to assess IBP's ability to migrate to Cloud tooling (AWS). An internal Git training was also delivered in parallel.",
+        fr: "Développement d'un outil interne de suivi qualité pour les produits développés en interne. Ce projet ayant pour intension de jugé de la capaciter d'IBP à migrer vers un outillage Cloud (AWS). Formation Git dispensée en interne en parallèle pour les internes.",
+      },
+      links: {
+        "Informatique Banque Populaire": "https://www.bpce-si.fr/"
+      },
+    },
+    {
+      date: {
+        en: "January 2019",
+        fr: "Janvier 2019",
+      },
+      title: {
+        en: "Trainer, Zenika consultant",
+        fr: "Formateur, consultant Zenika",
+      },
+      tags: ["javascript", "rxjs"],
+      description: {
+        en: "Training delivered on JavaScript and RxJS. Updated course materials and created exercises tailored to the students' needs.",
+        fr: "Formation dispensée sur JavaScript et RxJS. Mise à jour des supports de cours, création d'exercices adaptés aux besoins des élèves.",
+      },
+      links: {
+        "Zenika Training": "https://training.zenika.com"
+      }
+    },
+    {
+      date: {
+        en: "September 2018 → December 2018",
+        fr: "Septembre 2018 → Décembre 2018",
+      },
+      tags: ["javascript", "angular", "nodejs", "ionic", "firebase"],
+      title: {
+        en: "Manitou Group – Web Developer, Zenika consultant",
+        fr: "Manitou Group – Développeur Web, consultant Zenika",
+      },
+      description: {
+        en: "Maintenance and development of a mobile web application for internal group communication (news, events, chat).",
+        fr: "Maintenance et développement d'une application web mobile pour la communication interne au groupe (actualité, événements, chat).",
+      },
+      links: {
+        "Manitou Group": "https://www.manitou-group.com"
+      },
+    },
+    {
+      date: {
+        en: "February 2018 → August 2018",
+        fr: "Février 2018 → Août 2018",
+      },
+      tags: ["java", "spring", "javascript", "angular"],
+      title: {
+        en: "Groupama – Web Developer, Zenika consultant",
+        fr: "Groupama – Développeur Web, consultant Zenika",
+      },
+      description: {
+        fr: "Maintenance et développement de l'espace assurance client particulier.",
+        en: "Maintenance and development of the personal customer insurance portal.",
+      },
+      links: {
+        "Groupama": "https://www.groupama.fr"
+      },
+    },
+    {
+      date: {
+        en: "January 2017 → February 2018",
+        fr: "Janvier 2017 → Février 2018",
+      },
+      title: {
+        en: "Energiency – Web Developer, SII consultant",
+        fr: "Energiency – Développeur Web, consultant SII",
+      },
+      tags: ["nodejs", "angular", "mongodb", "scrum"],
+      description: {
+        en: "Maintenance and development of the Energiency product: an energy consumption monitoring platform for the industry.",
+        fr: "Maintenance et développement du produit Energiency : plateforme de monitoring de consommations d'énergies pour l'industrie.",
+      },
+      links: {
+        "Energiency": "https://www.energiency.com",
+      },
+    },
+    {
+      date: {
+        en: "January 2016 → June 2016",
+        fr: "Janvier 2016 → Juin 2016",
+      },
+      title: {
+        en: "Research internship: “Towards Metamorphic DSL” (INRIA, Rennes)",
+        fr: "Stage de recherche: “Towards Metamorphic DSL” (INRIA, Rennes)",
+      },
+      tags: ["research", "dsl", "xtend", "java", "python"],
+      description: {
+        en: "Research and writing of a bibliography on the state of the art in Domain Specific Language usage, with the aim of creating automatic translation bridges between different internal and external DSLs.",
+        fr: "Recherche et rédaction d'une bibliographie sur l'état de l'art sur l'usage des Domain Specific Languages dans l'idée de créer des ponts de traduction automatique entre différents DSL internes et externes.",
+      },
+      links: {
+        "bibliography": "https://github.com/pierrelegall/towards-metamorphic-dsl/document.org",
+        "prototype": "https://github.com/pierrelegall/busimo",
+        "INRIA": "https://www.inria.fr",
+      },
+    },
+    {
+      date: {
+        en: "September 2015 → June 2016",
+        fr: "Septembre 2015 → Juin 2016",
+      },
+      title: {
+        en: "Research Master's in Computer Science, “Human-Centered Computing” (Université de Bretagne Occidentale, Brest)",
+        fr: "Master recherche en informatique, “Informatique centrée sur l'Humain” (Université de Bretagne Occidentale, Brest)",
+      },
+      tags: ["research", "human", "python"],
+      description: {
+        en: "Research master's at the intersection of computer science and the humanities, focused on interactive system design and artificial intelligence.",
+        fr: "Master recherche à l'intersection de l'informatique et des sciences humaines, centré sur la conception de systèmes interactifs et l'intelligence artificielle.",
+      },
+      links: {
+        "Université de Bretagne Occidentale": "https://www.univ-brest.fr/",
+      },
+    },
+    {
+      date: {
+        en: "September 2014 → August 2015",
+        fr: "Septembre 2014 → Août 2015",
+      },
+      title: {
+        en: "Télécom Santé – Web Developer",
+        fr: "Télécom Santé – Développeur Web",
+      },
+      tags: ["javascript", "nodejs", "mongodb", "testlink"],
+      description: {
+        en: "Maintenance and development of the MediaScreen product: a hybrid TV-tablet multimedia center dedicated to hospital room patients.",
+        fr: "Maintenance et développement du produit MediaScreen : centre multimédia hybride TV-tablette dédié aux patients en chambre d'hôpital.",
+      },
+      links: {
+        "Télécom Santé": "https://www.hoppen.care/",
+      },
+    },
+    {
+      date: {
+        en: "January 2013 → August 2014",
+        fr: "Janvier 2013 → Août 2014",
+      },
+      title: {
+        en: "Thalès Systèmes Aéroportés – Web Developer, student",
+        fr: "Thalès Systèmes Aéroportés – Développeur Web, étudiant",
+      },
+      tags: ["php", "symfony", "javascript", "extjs", "mysql"],
+      description: {
+        en: "Maintenance and development of the repair workflow tracking system.",
+        fr: "Maintenance et développement du système de suivi du flux de travail de réparation.",
+      },
+      links: {
+        "Thales Group": "https://www.thalesgroup.com",
+      },
+    },
+    {
+      date: {
+        en: "September 2013 → June 2014",
+        fr: "Septembre 2013 → Juin 2014",
+      },
+      title: {
+        en: "Master's in Computer Science “Information Technologies and Software Engineering” (Université de Bretagne Occidentale, Brest)",
+        fr: "Master en informatique “Technologies de l'Information et Ingénierie du Logiciel” (Université de Bretagne Occidentale, Brest)",
+      },
+      tags: ["c", "java", "smalltalk", "ocaml", "vhdl", "git"],
+      description: {
+        en: "Master's focused on the design and development of software systems, covering programming languages, architectures and software engineering methodologies.",
+        fr: "Master axé sur la conception et le développement de systèmes logiciels, couvrant les langages, architectures et méthodologies de l'ingénierie logicielle.",
+      },
+      links: {
+        "Université de Bretagne Occidentale": "https://www.univ-brest.fr/",
+      },
+    },
+    {
+      date: {
+        en: "September 2011 → June 2012",
+        fr: "Septembre 2011 → Juin 2012",
+      },
+      title: {
+        en: "Bachelor's in Computer Science, “Software Developer” (Université de Bretagne Occidentale, Brest)",
+        fr: "Licence en informatique, “Développeur logiciel” (Université de Bretagne Occidentale, Brest)",
+      },
+      tags: ["c", "java", "ruby"],
+      description: {
+        en: "Bachelor's introducing the fundamentals of programming and software development, with a multidisciplinary approach to information technologies.",
+        fr: "Licence introduisant les bases de la programmation et du développement logiciel, avec une approche pluridisciplinaire des technologies de l'information.",
+      },
+      links: {
+        "Université de Bretagne Occidentale": "https://www.univ-brest.fr/",
+      },
+    },
+    {
+      date: {
+        en: "September 2009 → June 2011",
+        fr: "Septembre 2009 → Juin 2011",
+      },
+      title: {
+        en: "BTS in Computer Science, “Business Application Developer” (Université de Bretagne Occidentale, Brest)",
+        fr: "BTS en informatique, “Développeur d'applications de gestion” (Université de Bretagne Occidentale, Brest)",
+      },
+      tags: ["java", "ruby", "php", "html", "css", "sql", "mysql"],
+      description: {
+        en: "Initial training in software development fundamentals: algorithms, object-oriented programming, database design and web development.",
+        fr: "Formation initiale aux bases du développement logiciel : algorithmique, programmation orientée objet, conception de bases de données et développement web."
+      },
+      links: {
+        "Université de Bretagne Occidentale": "https://www.univ-brest.fr/",
+      },
+    }
+  ]
+</script>
+
+<svelte:head>
+  <title>Portfolio ~ {config.title}</title>
+  <meta name="author" content={config.author} />
+  <meta name="description" content="Portfolio ~ Pierre Le Gall" />
+</svelte:head>
+
+<section class="space-y-11">
+  <h1 class="page-title text-3xl sm:text-4xl whitespace-nowrap select-none">~> cat portfolio</h1>
+
+  <div>
+    <div class="flex items-center justify-start sm:justify-center gap-4 select-none">
+      <div class="hidden sm:block sm:flex-1 text-right whitespace-nowrap">Pierre Le Gall</div>
+      <img
+        class="ml-2 sm:-ml-0 w-30 min-w-30 sm:rounded-full border-4 border-white/70 opacity-90"
+        src="/assets/main/me.avif"
+        alt="Pierre"
+        draggable="false"
+      />
+      <div class="sm:flex-1 text-left whitespace-nowrap">
+        <div class="sm:hidden">Pierre Le Gall</div>
+        <div>Software Engineer</div>
+      </div>
+    </div>
+    <hr class="separator" />
+    <ul class="timeline timeline-vertical">
+      {#each events as event, i (event.title.en)}
+        <li>
+          <hr />
+          <div class="{i % 2 !== 0 ? 'timeline-start' : 'timeline-end'} timeline-box mb-6 block">
+          <time class="text-xs opacity-50">{event.date.en}</time>
+          <p class="mt-1 font-bold" style="color: var(--secondary-color)">{event.title.en}</p>
+          {#if event.tags.length > 0}
+            <p class="mt-1 text-sm text-white">{event.tags.map(t => `#${t}`).join(" ")}</p>
+          {/if}
+          {#if event.description}
+            <p class="mt-1 text-sm opacity-80">{event.description.en}</p>
+          {/if}
+          {#if event.links}
+            <ul class="links mt-1 text-sm {i % 2 !== 0 ? 'links-right sm:text-right' : ''}">
+              {#each Object.entries(event.links) as [name, url] (name)}
+                <li><a href={url} target="_blank" rel="noopener noreferrer" style="color: var(--primary-color)">{name}</a></li>
+              {/each}
+            </ul>
+          {/if}
+          </div>
+          <div class="timeline-middle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-primary h-5 w-5" style="color: var(--primary-color)">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <hr class={i === events.length - 1 ? "dotted" : ""} />
+        </li>
+      {/each}
+    </ul>
+  </div>
+</section>
+
+<style>
+  /* Timeline component — adapted from DaisyUI 5 */
+  /* https://github.com/saadeghi/daisyui */
+
+  .timeline {
+    display: flex;
+    position: relative;
+  }
+
+  .timeline > li {
+    grid-template-rows: var(--timeline-row-start, minmax(0, 1fr)) auto var(--timeline-row-end, minmax(0, 1fr));
+    grid-template-columns: var(--timeline-col-start, minmax(0, 1fr)) auto var(--timeline-col-end, minmax(0, 1fr));
+    flex-shrink: 0;
+    align-items: center;
+    display: grid;
+    position: relative;
+  }
+
+  .timeline > li > hr {
+    border: none;
+    width: 100%;
+  }
+
+  .timeline > li > hr:first-child {
+    grid-row-start: 2;
+    grid-column-start: 1;
+  }
+
+  .timeline > li > hr:last-child {
+    grid-area: 2 / 3 / auto / none;
+  }
+
+  .timeline :where(hr) {
+    background-color: var(--text-2);
+    height: 0.25rem;
+  }
+
+  .timeline-box {
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    font-size: 0.875rem;
+  }
+
+  .timeline-start {
+    grid-area: 1 / 1 / 2 / 4;
+    place-self: flex-end center;
+    margin: 0.25rem;
+  }
+
+  .timeline-middle {
+    grid-row-start: 2;
+    grid-column-start: 2;
+  }
+
+  .timeline-end {
+    grid-area: 3 / 1 / 4 / 4;
+    place-self: flex-start center;
+    margin: 0.25rem;
+  }
+
+
+  .timeline-vertical {
+    flex-direction: column;
+  }
+
+  .timeline-vertical > li {
+    --timeline-row-start: minmax(0, 1fr);
+    --timeline-row-end: minmax(0, 1fr);
+    justify-items: center;
+  }
+
+  .timeline-vertical > li > hr {
+    width: 0.25rem;
+    height: 100%;
+  }
+
+  .timeline-vertical > li > hr:first-child {
+    grid-row-start: 1;
+    grid-column-start: 2;
+  }
+
+  .timeline-vertical > li > hr:last-child {
+    grid-area: 3 / 2 / none;
+  }
+
+  .timeline-vertical .timeline-start {
+    grid-area: 1 / 1 / 4 / 2;
+    place-self: center flex-end;
+    text-align: right;
+  }
+
+  @media (max-width: 639px) {
+    .timeline-vertical .timeline-start {
+      grid-area: 1 / 3 / 4 / 4;
+      place-self: center flex-start;
+      text-align: left;
+    }
+
+    .timeline-vertical > li {
+      --timeline-col-start: 0;
+    }
+  }
+
+  .timeline-vertical .timeline-end {
+    grid-area: 1 / 3 / 4 / 4;
+    place-self: center flex-start;
+  }
+
+  .timeline-vertical :where(hr.dotted) {
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--text-2) 0px,
+      var(--text-2) 4px,
+      transparent 4px,
+      transparent 9px
+    );
+  }
+
+  hr.separator {
+    border: none;
+    background-color: var(--text-2);
+    width: 0.25rem;
+    height: 1.5rem;
+    margin-inline: auto;
+  }
+
+  @media (max-width: 639px) {
+    hr.separator {
+      margin-inline: 0.5rem;
+    }
+  }
+
+.links li::before {
+    content: "> ";
+  }
+
+  @media (min-width: 640px) {
+    .links-right li::before {
+      content: none;
+    }
+
+    .links-right li::after {
+      content: " <";
+    }
+  }
+
+</style>
